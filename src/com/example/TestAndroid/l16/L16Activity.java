@@ -23,6 +23,7 @@ public class L16Activity extends Activity implements View.OnClickListener, OnDat
     private ListView lvPlanets;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
