@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/tvAnimate_l10A"/>
+    <view android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          class="com.example.TestAndroid.l10.ChooserView" android:id="@+id/customView"
+          android:layout_below="@+id/tvAnimate_l10A" android:layout_marginTop="50dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text="tvTouch"
+            android:id="@+id/tvTouch" android:layout_alignParentBottom="true" android:textSize="40sp"
+            android:gravity="center"/>
+</RelativeLayout>

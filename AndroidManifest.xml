@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+        <!--xmlns:custom="http://schemas.android.com/apk/res-auto"-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.TestAndroid"
+          android:versionCode="1"
+          android:versionName="1.2.1">
+
+    <uses-sdk android:minSdkVersion="14" android:maxSdkVersion="21" android:targetSdkVersion="16"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher"
+            android:theme="@style/AppTheme">
+
+        <!--android:uiOptions="splitActionBarWhenNarrow"-->
+        <activity android:name="MainActivity"
+                  android:label="@string/app_name"
+                android:configChanges="orientation|screenSize"
+                android:theme="@style/MainActivityTheme">
+        </activity>
+
+        <activity android:name="SecondActivity"
+                  android:label="second"/>
+
+        <activity android:name=".LoginActivity"
+                android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+
+        <activity android:name=".WebActivity" />
+
+        <!--custom:parentActivityName=".MainActivity"-->
+        <activity android:name=".MyListActivity">
+        </activity>
+
+        <activity android:name=".FActivity">
+        </activity>
+
+        <activity android:name=".l10.L10Activity">
+        </activity>
+
+        <activity android:name=".l11.L11Activity">
+        </activity>
+
+        <activity android:name=".l12.L12Activity">
+        </activity>
+
+        <service android:name=".l12.MyIntentService"
+                 android:exported="false"/>
+
+        <service android:name=".l12.MyService"
+                 android:exported="false"/>
+
+        <activity android:name=".l13.L13Activity">
+        </activity>
+
+        <!--<receiver android:name=".l13.MyReceiver">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.BATTERY_LOW"/>-->
+                <!--<action android:name="android.intent.action.BATTERY_OKAY"/>-->
+                <!--<action android:name="android.intent.action.BATTERY_CHANGED"/>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <service android:name=".l13.MyBroadcastService" android:exported="false"/>
+
+        <activity android:name=".l14.L14Activity">
+        </activity>
+
+        <activity android:name=".l15.L15Activity">
+        </activity>
+
+        <activity android:name=".l16.L16Activity"
+                android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

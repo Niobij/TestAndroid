@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_activity_login">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView"
+            android:src="@drawable/ic_launcher"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"/>
+    <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/relativeLayout"
+            android:visibility="visible">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etName" android:layout_marginBottom="@dimen/margin_login"
+                android:hint="@string/hint_name" android:padding="@dimen/padding_login"
+                style="@style/EditTextName"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPass" android:layout_below="@+id/etName"
+                android:layout_marginBottom="@dimen/margin_login" android:hint="@string/hint_pass"
+                android:padding="@dimen/padding_login" style="@style/EditTextPass"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:id="@+id/btnLogin" android:layout_below="@+id/etPass" android:layout_centerHorizontal="true"
+                style="@style/LoginBtn" android:background="@drawable/selector_btn" />
+    </RelativeLayout>
+</RelativeLayout>

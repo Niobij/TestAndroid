@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginTop="?android:attr/actionBarSize">
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dialog"
+                android:id="@+id/btnDialog"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Context Menu"
+                android:id="@+id/tvText" android:textSize="30sp" android:layout_alignParentRight="true"
+                android:padding="8dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popup"
+                android:id="@+id/tvTextPopup" android:textSize="30sp" android:layout_below="@+id/btnDialog"
+                android:padding="10dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Action Bar"
+                android:id="@+id/btnActionBar" android:layout_alignParentBottom="true"
+                />
+</RelativeLayout>
