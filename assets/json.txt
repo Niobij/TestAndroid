@@ -1,0 +1,84 @@
+{
+	"spot" : {
+		"name" : "Solar System",
+		"age" : "4.568 billion years",
+		"mass" : "1.0014 Solar masses",
+		"planetsCount" : "8",
+		"orbitalSpeed" : "220 km/s",
+		"imgUrl" : "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Planets2013.jpg/320px-Planets2013.jpg"
+	},	
+	"planets" : [
+		{
+			"place" : "0",
+			"type" : "Star",
+			"name" : "Sun",
+			"mass" : "(1.98855±0.00025)×10^30 kg",
+			"orbitalSpeed" : "none",
+			"imgUrl" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/The_Sun_as_seen_in_January_1st_2015.jpg/240px-The_Sun_as_seen_in_January_1st_2015.jpg"
+		},
+		{
+			"place" : "1",
+			"type" : "Terrestrial planet",
+			"name" : "Mercury",
+			"mass" : "3.3022×10^23 kg",
+			"orbitalSpeed" : "48 km/s",
+			"imgUrl" : "http://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Mercury_in_color_-_Prockter07_centered.jpg/242px-Mercury_in_color_-_Prockter07_centered.jpg"
+		},
+		{
+			"place" : "2",
+			"type" : "Terrestrial planet",
+			"name" : "Venus",
+			"mass" : "4.8676×10^24 kg",
+			"orbitalSpeed" : "35.02 km/s",
+			"imgUrl" : "http://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg"
+		},
+		{
+			"place" : "3",
+			"type" : "Terrestrial planet",
+			"name" : "Earth",
+			"mass" : "5.97219×10^24 kg",
+			"orbitalSpeed" : "29.78 km/s",
+			"imgUrl" : "http://upload.wikimedia.org/wikipedia/commons/4/41/Earth_in_vivid_colors_1.jpg"
+		},
+		{
+			"place" : "4",
+			"type" : "Terrestrial planet",
+			"name" : "Mars",
+			"mass" : "6.4185×10^23 kg",
+			"orbitalSpeed" : "24.077 km/s",
+			"imgUrl" : "http://upload.wikimedia.org/wikipedia/commons/7/76/Mars_Hubble.jpg"
+		},
+		{
+			"place" : "5",
+			"type" : "Outer planets/Giant planet",
+			"name" : "Jupiter",
+			"mass" : "1.8986×10^27 kg",
+			"orbitalSpeed" : "13.07 km/s",
+			"imgUrl" : "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Jupiter_by_Cassini-Huygens.jpg/249px-Jupiter_by_Cassini-Huygens.jpg"
+		},
+		{
+			"place" : "6",
+			"type" : "Outer planets/Giant planet",
+			"name" : "Saturn",
+			"mass" : "5.6846×10^26 kg",
+			"orbitalSpeed" : "9.69 km/s",
+			"imgUrl" : "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Saturn_PIA06077.jpg/320px-Saturn_PIA06077.jpg"
+		},
+		{
+			"place" : "7",
+			"type" : "Outer planets/Giant planet",
+			"name" : "Uranus",
+			"mass" : "(8.6810±0.0013)×10^25 kg",
+			"orbitalSpeed" : "6.80 km/s",
+			"imgUrl" : "http://upload.wikimedia.org/wikipedia/commons/a/a8/Hubble_Uranus.jpg"
+		},
+		{
+			"place" : "8",
+			"type" : "Outer planets/Giant planet",
+			"name" : "Neptune",
+			"mass" : "1.0243×10^26 kg",
+			"orbitalSpeed" : "5.43 km/s",
+			"imgUrl" : "http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Neptune.jpg/244px-Neptune.jpg"
+		}
+	]
+}
