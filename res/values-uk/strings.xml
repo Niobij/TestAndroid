@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<resources>
-
-    <string name="app_name">Андроід</string>
-    <string name="hint_name">Введіть імя</string>
-    <string name="hint_pass">Введіть пароль</string>
-
-</resources>
