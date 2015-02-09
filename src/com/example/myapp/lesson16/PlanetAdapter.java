@@ -1,10 +1,10 @@
-package com.example.myapp;
+package com.example.myapp.lesson16;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import com.example.myapp.models.PlanetModel;
+import com.example.myapp.lesson16.models.PlanetModel;
 import java.util.ArrayList;
 
 

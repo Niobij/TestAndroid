@@ -1,4 +1,4 @@
-package com.example.myapp;
+package com.example.myapp.lesson16;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -6,9 +6,10 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
-import com.example.myapp.models.PlanetModel;
-import com.example.myapp.models.SolarSystemModel;
-import com.example.myapp.models.SpotModel;
+import com.example.myapp.R;
+import com.example.myapp.lesson16.models.PlanetModel;
+import com.example.myapp.lesson16.models.SolarSystemModel;
+import com.example.myapp.lesson16.models.SpotModel;
 
 
 import java.util.ArrayList;

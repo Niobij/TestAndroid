@@ -1,10 +1,10 @@
-package com.example.myapp;
+package com.example.myapp.lesson16;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import com.example.myapp.models.PlanetModel;
-import com.example.myapp.models.SolarSystemModel;
-import com.example.myapp.models.SpotModel;
+import com.example.myapp.lesson16.models.PlanetModel;
+import com.example.myapp.lesson16.models.SolarSystemModel;
+import com.example.myapp.lesson16.models.SpotModel;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

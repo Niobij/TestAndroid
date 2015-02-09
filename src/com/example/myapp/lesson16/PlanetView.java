@@ -1,11 +1,12 @@
-package com.example.myapp;
+package com.example.myapp.lesson16;
 
 import android.content.Context;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.example.myapp.models.PlanetModel;
+import com.example.myapp.R;
+import com.example.myapp.lesson16.models.PlanetModel;
 
 
 public class PlanetView extends RelativeLayout {

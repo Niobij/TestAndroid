@@ -1,7 +1,7 @@
-package com.example.myapp;
+package com.example.myapp.lesson16;
 
 
-import com.example.myapp.models.SolarSystemModel;
+import com.example.myapp.lesson16.models.SolarSystemModel;
 
 public interface OnDataLoadListener {
     public void onSuccess(SolarSystemModel _model);
