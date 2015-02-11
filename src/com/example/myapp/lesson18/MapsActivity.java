@@ -40,8 +40,8 @@ import java.util.UUID;
 public class MapsActivity extends Activity implements OnMapReadyCallback, View.OnClickListener, GoogleMap.OnMapClickListener {
 
     static final int REQUEST_IMAGE_GET = 1;
-    static final int IMAGE_MARKER_WIDTH = 56;
-    static final int IMAGE_MARKER_HEIGHT = 40;
+    static final int IMAGE_MARKER_WIDTH = 93;
+    static final int IMAGE_MARKER_HEIGHT = 70;
 
 
     LocationManager locationManager;
@@ -72,7 +72,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
     protected void onDestroy() {
         super.onDestroy();
         saveDataInDatabase();
-        Log.d("tag", "Save marker history");
+        Toast.makeText(this, "Save marker history", Toast.LENGTH_SHORT).show();
     }
 
     private void loadDataFromDatabase(){
@@ -209,6 +209,9 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
         dialog.show();
 
         ivMarkerImage = (ImageView)view.findViewById(R.id.ivMarkerImage);
+        ImageButton ibSelectImage = (ImageButton)view.findViewById(R.id.ibSelectImage);
+
+        ibSelectImage.setOnClickListener(this);
         ivMarkerImage.setOnClickListener(this);
 
     }
@@ -217,10 +220,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
         startActivityForResult(intent, REQUEST_IMAGE_GET);
-
     }
-
-
 
     @Override
     public void onClick(View v) {
@@ -229,13 +229,16 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
             case R.id.ivMarkerImage:
                 selectImage();
                 break;
+            case R.id.ibSelectImage:
+                selectImage();
+                break;
 
         }
     }
 
     @Override
     public void onMapClick(LatLng latLng) {
-        startMarkerDialog(latLng);
+            startMarkerDialog(latLng);
     }
 
     @Override
@@ -244,7 +247,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
         if (requestCode == REQUEST_IMAGE_GET && resultCode == RESULT_OK) {
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
-                ivMarkerImage.setImageBitmap(getOptimizeBitmap(bitmap, 32, 32));
+                ivMarkerImage.setImageBitmap(getOptimizeBitmap(bitmap, 64, 64));
                 bitmapMarker = getOptimizeBitmap(bitmap, IMAGE_MARKER_WIDTH, IMAGE_MARKER_HEIGHT);
 
             } catch (IOException e) {
@@ -272,7 +275,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
     }
 
     private Bitmap addFrame(Bitmap bitmap){
-        Bitmap frame = BitmapFactory.decodeResource(getResources(), R.drawable.ic_marker_frame);
+        Bitmap frame = getOptimizeBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_marker_frame), 100, 100);
         Bitmap newBitmap;
         Bitmap.Config config = frame.getConfig();
         if (config == null) {
@@ -285,8 +288,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
 
         Canvas canvas = new Canvas(newBitmap);
         canvas.drawBitmap(frame, 0, 0, null);
-        canvas.drawBitmap(bitmap, 2, 2, null);
-
+        canvas.drawBitmap(bitmap, 3, 3, null);
 
         return newBitmap;
     }

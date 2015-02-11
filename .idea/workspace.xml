@@ -20,7 +20,7 @@
       </layout>
       <layout url="file://$PROJECT_DIR$/res/layout/marker_dialog.xml">
         <config>
-          <theme>@android:style/Theme.Holo.Light</theme>
+          <theme>@android:style/Theme.Holo</theme>
         </config>
       </layout>
     </layouts>
@@ -30,30 +30,12 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.example.myapp" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24091778-b9fb-4a18-975d-d3e8328450ea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_marker_frame.png" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\HomeWorkLesson16.apk" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\HomeWorkLesson16.unaligned.apk" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\LoadAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\LoadImageAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\OnDataLoadListener.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\OnImageLoadListener.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\PlanetAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\PlanetView.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\R.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\models\PlanetModel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\models\SolarSystemModel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Data\Java\Курси\Home work\HomeWork\out\production\HomeWorkLesson16\com\example\myapp\models\SpotModel.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+    <list default="true" id="24091778-b9fb-4a18-975d-d3e8328450ea" name="Default" comment="Add marker image frame">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/ic_marker.png" afterPath="$PROJECT_DIR$/res/drawable/ic_marker.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/ic_marker_frame.png" afterPath="$PROJECT_DIR$/res/drawable/ic_marker_frame.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/myapp/lesson18/MapsActivity.java" afterPath="$PROJECT_DIR$/src/com/example/myapp/lesson18/MapsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/google-play-services_lib/project.properties" afterPath="$PROJECT_DIR$/libs/google-play-services_lib/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/maps_container_activity.xml" afterPath="$PROJECT_DIR$/res/layout/maps_container_activity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/marker_dialog.xml" afterPath="$PROJECT_DIR$/res/layout/marker_dialog.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lesson16.iws" />
@@ -79,36 +61,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MapsActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MapsActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/myapp/lesson18/MapsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3630" max-vertical-offset="7172">
-              <caret line="165" column="5" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.7702407" vertical-offset="1430" max-vertical-offset="7150">
+              <caret line="81" column="52" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
               <folding>
-                <element signature="e#8077#8078#0" expanded="false" />
-                <element signature="e#8118#8119#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="GoogleMap.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/libs/google-play-services_lib/libs/google-play-services.jar!/com/google/android/gms/maps/GoogleMap.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39148936" vertical-offset="278" max-vertical-offset="1188">
-              <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
-              <folding>
-                <element signature="e#1020#1059#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeWork.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HomeWork.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="748">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6312" max-vertical-offset="12760">
+              <caret line="349" column="28" selection-start-line="349" selection-start-column="28" selection-end-line="349" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -116,27 +85,27 @@
       </file>
       <file leaf-file-name="marker_dialog.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/marker_dialog.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="528">
+            <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="682">
               <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding />
             </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="maps_container_activity.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/maps_container_activity.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="836">
+            <state vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="418">
               <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
               <folding />
             </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -146,21 +115,19 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="388" max-vertical-offset="880">
               <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
               <folding>
-                <element signature="e#278#279#0" expanded="false" />
-                <element signature="e#307#308#0" expanded="false" />
-                <element signature="e#343#344#0" expanded="false" />
-                <element signature="e#375#376#0" expanded="false" />
-                <element signature="e#413#414#0" expanded="false" />
-                <element signature="e#447#448#0" expanded="false" />
-                <element signature="e#726#727#0" expanded="false" />
-                <element signature="e#781#782#0" expanded="false" />
-                <element signature="e#816#817#0" expanded="false" />
-                <element signature="e#872#873#0" expanded="false" />
-                <element signature="e#922#923#0" expanded="false" />
-                <element signature="e#964#965#0" expanded="false" />
-                <element signature="e#1018#1019#0" expanded="false" />
-                <element signature="e#1064#1065#0" expanded="false" />
+                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#692#693#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyDbOpenHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/myapp/lesson18/MyDbOpenHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1144">
+              <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -198,16 +165,16 @@
         <option value="$PROJECT_DIR$/src/com/example/myapp/PlanetView.java" />
         <option value="$PROJECT_DIR$/src/com/example/myapp/lesson16/PlanetView.java" />
         <option value="$PROJECT_DIR$/res/values/dimension.xml" />
-        <option value="$PROJECT_DIR$/res/layout/marker_dialog.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/example/myapp/lesson18/SelectionMarkerView.java" />
         <option value="$PROJECT_DIR$/src/com/example/myapp/lesson18/MarkerOblect.java" />
         <option value="$PROJECT_DIR$/src/com/example/myapp/lesson18/MarkerObject.java" />
         <option value="$PROJECT_DIR$/src/com/example/myapp/lesson18/MyDbOpenHelper.java" />
-        <option value="$PROJECT_DIR$/res/layout/maps_container_activity.xml" />
         <option value="$PROJECT_DIR$/HomeWork.iml" />
-        <option value="$PROJECT_DIR$/src/com/example/myapp/lesson18/MapsActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/maps_container_activity.xml" />
+        <option value="$PROJECT_DIR$/res/layout/marker_dialog.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/myapp/lesson18/MapsActivity.java" />
       </list>
     </option>
   </component>
@@ -243,7 +210,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -276,9 +242,86 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lesson18" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vasia_lipcha_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vasia_lipcha_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vasia_lipcha_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vasia_lipcha_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -559,7 +602,13 @@
       <option name="project" value="LOCAL" />
       <updated>1423648363623</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add marker image frame">
+      <created>1423673831711</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1423673831711</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -647,11 +696,12 @@
     <MESSAGE value="create MapsActivity" />
     <MESSAGE value="Added marker dialog configuration" />
     <MESSAGE value="save marker to database" />
-    <option name="LAST_COMMIT_MESSAGE" value="save marker to database" />
+    <MESSAGE value="Add marker image frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add marker image frame" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -706,9 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1020#1059#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -741,23 +788,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_l16.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/view_planet.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/view_planet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/json.txt">
@@ -775,33 +822,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/view_planet.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.833333" vertical-offset="187" max-vertical-offset="704">
           <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="429">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_l16.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_l16.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8974359" vertical-offset="297" max-vertical-offset="814">
           <caret line="31" column="0" selection-start-line="27" selection-start-column="4" selection-end-line="31" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/myapp/lesson16/models/PlanetModel.java">
@@ -948,23 +995,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/myapp/lesson18/MyDbOpenHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1210">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Soft/ANDROID/adt-bundle-windows-x86_64-20140702/sdk/sources/android-17/java/util/UUID.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="8404" max-vertical-offset="9570">
           <caret line="415" column="7" selection-start-line="415" selection-start-column="7" selection-end-line="415" selection-end-column="7" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/ic_marker_frame.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://D:/Soft/ANDROID/adt-bundle-windows-x86_64-20140702/sdk/sources/android-17/android/graphics/Bitmap.java">
@@ -982,69 +1017,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-land/activity_l16.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57121664" vertical-offset="77" max-vertical-offset="1144">
           <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/myapp/lesson18/MarkerObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="968">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-          <folding>
-            <element signature="e#278#279#0" expanded="false" />
-            <element signature="e#307#308#0" expanded="false" />
-            <element signature="e#343#344#0" expanded="false" />
-            <element signature="e#375#376#0" expanded="false" />
-            <element signature="e#413#414#0" expanded="false" />
-            <element signature="e#447#448#0" expanded="false" />
-            <element signature="e#726#727#0" expanded="false" />
-            <element signature="e#781#782#0" expanded="false" />
-            <element signature="e#816#817#0" expanded="false" />
-            <element signature="e#872#873#0" expanded="false" />
-            <element signature="e#922#923#0" expanded="false" />
-            <element signature="e#964#965#0" expanded="false" />
-            <element signature="e#1018#1019#0" expanded="false" />
-            <element signature="e#1064#1065#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/maps_container_activity.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="418">
-          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/marker_dialog.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="528">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/myapp/lesson18/MapsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3608" max-vertical-offset="7106">
-          <caret line="165" column="5" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
-          <folding>
-            <element signature="e#8077#8078#0" expanded="false" />
-            <element signature="e#8118#8119#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1052,26 +1031,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3036">
           <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/myapp/lesson18/MyDbOpenHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1144">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HomeWork.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="248" max-vertical-offset="748">
+        <state vertical-scroll-proportion="0.1574468" vertical-offset="278" max-vertical-offset="748">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39148936" vertical-offset="278" max-vertical-offset="1188">
-          <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.70212764" vertical-offset="0" max-vertical-offset="1188">
+          <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/myapp/lesson18/MarkerObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="968">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
           <folding>
-            <element signature="e#1020#1059#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/maps_container_activity.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="418">
+          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/marker_dialog.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="528">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/google-play-services_lib/libs/google-play-services.jar!/com/google/android/gms/maps/GoogleMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6312" max-vertical-offset="12760">
+          <caret line="349" column="28" selection-start-line="349" selection-start-column="28" selection-end-line="349" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/myapp/lesson18/MapsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7702407" vertical-offset="1430" max-vertical-offset="7150">
+          <caret line="81" column="52" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

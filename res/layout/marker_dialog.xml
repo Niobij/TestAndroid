@@ -3,7 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" android:weightSum="1">
+              android:layout_height="wrap_content" android:weightSum="1" android:padding="10dp">
 
     <ImageView
             android:layout_width="@dimen/marker_image_size"
@@ -11,9 +11,16 @@
             android:id="@+id/ivMarkerImage" android:background="@android:drawable/ic_menu_gallery"
             />
     <EditText
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/etMarkerText" android:layout_gravity="center_horizontal"
-            android:layout_toEndOf="@+id/ivMarkerImage"
-            android:layout_alignBottom="@+id/ivMarkerImage" android:layout_alignParentEnd="true"/>
+            android:hint="Title" android:layout_alignBottom="@+id/ibSelectImage"
+            android:layout_alignParentEnd="true" android:layout_toEndOf="@+id/ibSelectImage"/>
+    <ImageButton
+            android:layout_width="@dimen/marker_image_size"
+            android:layout_height="wrap_content"
+            android:id="@+id/ibSelectImage"
+            android:src="@android:drawable/ic_menu_more"
+            android:layout_below="@+id/ivMarkerImage" android:layout_alignParentStart="true"
+            />
 </RelativeLayout>
