@@ -10,5 +10,24 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:name="com.google.android.gms.maps.MapFragment"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton" android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" android:src="@color/common_signin_btn_light_text_focused"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton2" android:layout_alignTop="@+id/imageButton"
+            android:layout_toEndOf="@+id/imageButton"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton3" android:layout_alignBottom="@+id/imageButton2"
+            android:layout_toEndOf="@+id/imageButton2"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"/>
 
 </RelativeLayout>
