@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.location.Location;
@@ -26,7 +27,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -40,14 +40,17 @@ import java.util.UUID;
 public class MapsActivity extends Activity implements OnMapReadyCallback, View.OnClickListener, GoogleMap.OnMapClickListener {
 
     static final int REQUEST_IMAGE_GET = 1;
-    static final int IMAGE_MARKER_SIZE = 64;
+    static final int IMAGE_MARKER_WIDTH = 56;
+    static final int IMAGE_MARKER_HEIGHT = 40;
+
+
     LocationManager locationManager;
     MapFragment mapFragment;
     GoogleMap googleMap;
     MyDbOpenHelper database;
-
     ImageView ivMarkerImage;
     ArrayList<MarkerObject> markerObjectAList;
+    Bitmap bitmapMarker;
 
 
     @Override
@@ -62,16 +65,14 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
         database = new MyDbOpenHelper(this);
         markerObjectAList = new ArrayList<MarkerObject>();
 
-
-
     }
-
 
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         saveDataInDatabase();
+        Log.d("tag", "Save marker history");
     }
 
     private void loadDataFromDatabase(){
@@ -90,14 +91,9 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
 
                 MarkerObject markerObject = new MarkerObject();
 
-                String imageName = cursor.getString(imageNameIndex);
-                String latitude = cursor.getString(latitudeIndex);
-                String longitude = cursor.getString(longitudeIndex);
-                String markerTitle = cursor.getString(markerTitleIndex);
-//                Log.d("tag", "load data latitude = "  + latitude + "longitude = " + longitude + "markerTitle = " + markerTitle);
-                markerObject.setImageName(imageName);
-                markerObject.setLatLng(latitude, longitude);
-                markerObject.setMarkerTitle(markerTitle);
+                markerObject.setImageName(cursor.getString(imageNameIndex));
+                markerObject.setLatLng(cursor.getString(latitudeIndex), cursor.getString(longitudeIndex));
+                markerObject.setMarkerTitle(cursor.getString(markerTitleIndex));
 
                 markerObjectAList.add(markerObject);
             }
@@ -119,17 +115,12 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
             marker.title(aMarkerObjectAList.getMarkerTitle());
             marker.position(aMarkerObjectAList.getLatLng());
             Bitmap bitmap = null;
-            if (!aMarkerObjectAList.getImageName().equals("no image"))
-                bitmap = loadBitmap(aMarkerObjectAList.getImageName());
+            bitmap = loadBitmap(aMarkerObjectAList.getImageName());
 
-
-            Log.d("tag", "bitma " + bitmap);
-
-            if (bitmap != null)
-                marker.icon(BitmapDescriptorFactory.fromBitmap(bitmap));
-
-//            Log.d("tag", "googleMap " + googleMap);
-//            Log.d("tag", "marker " + marker);
+            if (bitmap != null) {
+                marker.icon(BitmapDescriptorFactory.fromBitmap(addFrame(bitmap)))
+                      .anchor((float) 0.2, 1);
+            }
             googleMap.addMarker(marker);
 
         }
@@ -146,20 +137,16 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
         SQLiteDatabase db = database.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        for (int i =0; i < markerObjectAList.size(); i++ ){
-            contentValues.put(MyDbOpenHelper.LATITUDE, markerObjectAList.get(i).getLatitude());
-            contentValues.put(MyDbOpenHelper.LONGITUDE, markerObjectAList.get(i).getLongitude());
-            contentValues.put(MyDbOpenHelper.MARKER_TITLE, markerObjectAList.get(i).getMarkerTitle());
-            contentValues.put(MyDbOpenHelper.IMAGE_NAME, markerObjectAList.get(i).getImageName());
-
-
+        for (MarkerObject aMarkerObjectAList : markerObjectAList) {
+            contentValues.put(MyDbOpenHelper.LATITUDE, aMarkerObjectAList.getLatitude());
+            contentValues.put(MyDbOpenHelper.LONGITUDE, aMarkerObjectAList.getLongitude());
+            contentValues.put(MyDbOpenHelper.MARKER_TITLE, aMarkerObjectAList.getMarkerTitle());
+            contentValues.put(MyDbOpenHelper.IMAGE_NAME, aMarkerObjectAList.getImageName());
             db.insert(MyDbOpenHelper.DICTIONARY_TABLE_NAME, null, contentValues);
 
         }
         database.close();
     }
-
-
 
 
     private void findView() {
@@ -202,16 +189,16 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
                         MarkerObject markerObject = new MarkerObject();
 
                         if (ivMarkerImage.getDrawable() != null) {
-                            markerOptions.icon(BitmapDescriptorFactory.fromBitmap(((BitmapDrawable) ivMarkerImage.getDrawable()).getBitmap()));
+                            markerOptions.icon(BitmapDescriptorFactory.fromBitmap(addFrame(bitmapMarker)))
+                                            .anchor((float) 0.2, 1);
+
                             String imageName = UUID.randomUUID().toString();
-                            saveBitmap(imageName, ((BitmapDrawable) ivMarkerImage.getDrawable()).getBitmap());
+                            saveBitmap(imageName, bitmapMarker);
                             markerObject.setImageName(imageName);
                         }
-                        else markerObject.setImageName("no image");
 
                         markerObject.setLatLng(latLng);
                         markerObject.setMarkerTitle(((TextView) view.findViewById(R.id.etMarkerText)).getText().toString());
-
 
                         markerObjectAList.add(markerObject);
                         googleMap.addMarker(markerOptions).showInfoWindow();
@@ -233,19 +220,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
 
     }
 
-    private Bitmap getOptimizeBitmap(Bitmap bm, int newHeight, int newWidth) {
 
-        int width = bm.getWidth();
-        int height = bm.getHeight();
-        float scaleWidth = ((float) newWidth) / width;
-        float scaleHeight = ((float) newHeight) / height;
-        Matrix matrix = new Matrix();
-        matrix.postScale(scaleWidth, scaleHeight);
-        Bitmap bitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
-
-        return bitmap;
-
-    }
 
     @Override
     public void onClick(View v) {
@@ -268,18 +243,53 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
 
         if (requestCode == REQUEST_IMAGE_GET && resultCode == RESULT_OK) {
             try {
-                Bitmap bitmap = getOptimizeBitmap(MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData()), IMAGE_MARKER_SIZE, IMAGE_MARKER_SIZE );
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
+                ivMarkerImage.setImageBitmap(getOptimizeBitmap(bitmap, 32, 32));
+                bitmapMarker = getOptimizeBitmap(bitmap, IMAGE_MARKER_WIDTH, IMAGE_MARKER_HEIGHT);
 
-                ivMarkerImage.setImageBitmap(bitmap);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+    private Bitmap getOptimizeBitmap(Bitmap bm, int newWidth, int newHeight) {
 
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+        Matrix matrix = new Matrix();
+        matrix.postScale(scaleWidth, scaleHeight);
+        Bitmap bitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
+
+        Log.d("tag", "Bitmap width = "  + bitmap.getWidth());
+        Log.d("tag", "Bitmap Height = " + bitmap.getHeight());
+
+        return bitmap;
+
+    }
+
+    private Bitmap addFrame(Bitmap bitmap){
+        Bitmap frame = BitmapFactory.decodeResource(getResources(), R.drawable.ic_marker_frame);
+        Bitmap newBitmap;
+        Bitmap.Config config = frame.getConfig();
+        if (config == null) {
+            config = Bitmap.Config.ARGB_8888;
+        }
+        Log.d("tag", "Frame width = "  + frame.getWidth());
+        Log.d("tag", "Frame Height = " + frame.getHeight());
+
+        newBitmap = Bitmap.createBitmap(frame.getWidth(), frame.getHeight(), config);
+
+        Canvas canvas = new Canvas(newBitmap);
+        canvas.drawBitmap(frame, 0, 0, null);
+        canvas.drawBitmap(bitmap, 2, 2, null);
+
+
+        return newBitmap;
+    }
 
 
     private boolean saveBitmap(String bitmapName, Bitmap bitmap) {
@@ -287,7 +297,6 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
 
         try {
             File file = new File(getCacheDir().toString(), bitmapName);
-//            File file = new File(Environment.getDataDirectory().toString(), bitmapName);
             fOut = new FileOutputStream(file);
             bitmap.compress(Bitmap.CompressFormat.JPEG, 85, fOut);
             fOut.flush();
@@ -303,9 +312,7 @@ public class MapsActivity extends Activity implements OnMapReadyCallback, View.O
     }
 
     private Bitmap loadBitmap(String bitmapName){
-
         Bitmap bitmap = BitmapFactory.decodeFile(getCacheDir() + "/" + bitmapName);
-//        Bitmap bitmap = BitmapFactory.decodeFile(Environment.getDataDirectory() + "/" + bitmapName);
         Log.d("tag", "loadBitmap " + Environment.getDataDirectory() + "/" + bitmapName);
         return bitmap;
     }
