@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:background="#5a55">
+
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/rgMain">
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New RadioButton"
+                android:id="@+id/rbOne" android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:layout_margin="10dp"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New RadioButton"
+                android:id="@+id/rbTwo" android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:layout_margin="10dp"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New RadioButton"
+                android:id="@+id/rbThree" android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:layout_margin="10dp"/>
+    </RadioGroup>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/tvSelect" android:layout_gravity="center_horizontal"/>
+</LinearLayout>

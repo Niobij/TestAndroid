@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/rlSp">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:id="@+id/llKeyValue">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etKey" android:layout_weight="1" android:hint="key" android:textSize="22sp"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etValue" android:layout_weight="1" android:hint="value" android:textSize="22sp"/>
+            </LinearLayout>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:id="@+id/btnSave" android:layout_below="@+id/llKeyValue" android:textSize="22sp"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read"
+                    android:id="@+id/btnRead" android:layout_toRightOf="@+id/btnSave" android:layout_below="@+id/llKeyValue"
+                    android:textSize="22sp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="data"
+                    android:id="@+id/tvSpData" android:layout_toRightOf="@+id/btnRead" android:layout_alignTop="@+id/btnRead"
+                    android:layout_alignBottom="@+id/btnRead" android:gravity="center_vertical" android:textSize="22sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/rlFiles" android:layout_below="@+id/rlSp"
+                android:layout_marginTop="20dp">
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etFileData" android:hint="file data" android:textSize="22sp"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Write File"
+                    android:id="@+id/btnWriteFile" android:layout_below="@+id/etFileData" android:textSize="22sp"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read File"
+                    android:id="@+id/btnReadFile" android:layout_toRightOf="@+id/btnWriteFile"
+                    android:layout_alignTop="@+id/btnWriteFile" android:textSize="22sp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="data"
+                    android:id="@+id/tvFileData" android:layout_below="@+id/btnWriteFile" android:textSize="22sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_below="@+id/rlFiles"
+                android:id="@+id/rlDatabase">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/llDbPair">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etWord" android:layout_weight="1" android:hint="word" android:textSize="22sp"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etDefinition" android:layout_weight="1" android:hint="definition"
+                        android:textSize="22sp"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/llDbBtns" android:layout_below="@+id/llDbPair">
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add"
+                        android:id="@+id/btnAddDb" android:layout_weight="1" android:textSize="22sp"/>
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Read"
+                        android:id="@+id/btnReadDb" android:layout_weight="1" android:textSize="22sp"/>
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Update"
+                        android:id="@+id/btnUpdate" android:layout_weight="1" android:textSize="22sp"/>
+            </LinearLayout>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="data"
+                    android:id="@+id/tvDbData" android:layout_below="@+id/llDbBtns" android:textSize="22sp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

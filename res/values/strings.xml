@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MozillaBugs</string>
-    <string name="load">Load Comments</string>
+
+    <string name="app_name">TestAndroid</string>
+    <string name="hint_name">Enter name</string>
+    <string name="hint_pass">Enter pass</string>
+
 </resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent Service"
+            android:id="@+id/btnIntentService"
+            />
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Service"
+            android:id="@+id/btnStartService" android:layout_below="@+id/btnIntentService"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop Service"
+            android:id="@+id/btnStopService" android:layout_below="@+id/btnStartService"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bind"
+            android:id="@+id/btnBind" android:layout_below="@+id/btnStopService"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do Binded"
+            android:id="@+id/btnDoBinded" android:layout_below="@+id/btnBind"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unbind"
+            android:id="@+id/btnUnbind" android:layout_below="@+id/btnDoBinded"/>
+
+</RelativeLayout>

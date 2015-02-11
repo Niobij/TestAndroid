@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="bg_activity_login">#ff6644</color>
+    <color name="bg_et_login">#bbffffff</color>
+    <color name="et_login">#000</color>
+    <color name="bg_btn">#44bb66</color>
+    <color name="bg_btn_pressed">#226633</color>
+    <color name="stroke_btn">#226633</color>
+    <color name="bg_btn_start">#44dd66</color>
+    <color name="bg_btn_center">#eedd66</color>
+    <color name="bg_btn_end">#224433</color>
+
+    <array name="dialog_colors">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>White</item>
+    </array>
+
+</resources>
