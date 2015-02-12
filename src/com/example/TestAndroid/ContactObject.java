@@ -12,4 +12,5 @@ public class ContactObject {
 		this.name = name;
 		this.phone = phone;
 	}
+
 }
