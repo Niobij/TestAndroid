@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvMessage"
+            android:textSize="22dp" android:textColor="@android:color/background_dark"
+            android:layout_marginLeft="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvTitle"
+            android:textSize="18dp" android:textColor="@android:color/background_dark"
+            android:layout_marginLeft="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvSubTitle"
+            android:textSize="18dp" android:textColor="@android:color/background_dark"
+            android:layout_marginLeft="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvTickerText"
+            android:textSize="18dp" android:textColor="@android:color/background_dark"
+            android:layout_marginLeft="10dp"/>
+
+</LinearLayout>

@@ -15,6 +15,11 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:name="com.example.TestAndroid.permission.C2D_MESSAGE"
+                android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.TestAndroid.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
 
 
@@ -37,12 +42,27 @@
 
         <activity android:name=".lesson18.MapsActivity">
 
+        </activity>
+
+        <activity android:name=".lesson19.L19Activity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
         </activity>
+
+        <receiver android:name=".lesson19.GcmBroadcastReceiver"
+                  android:permission="com.google.android.c2dm.permission.SEND">
+
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.example.TestAndroid"/>
+            </intent-filter>
+
+        </receiver>
+
+
     </application>
 
 </manifest>
