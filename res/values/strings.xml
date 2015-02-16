@@ -4,5 +4,6 @@
     <string name="app_name">TestAndroid</string>
     <string name="hint_name">Enter name</string>
     <string name="hint_pass">Enter pass</string>
+    <string name="gcm_api_key">AIzaSyDm_7tBOQzyGYCKEkTfyXjwG1leTdkKohc</string>
 
 </resources>
