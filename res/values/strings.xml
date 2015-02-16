@@ -5,4 +5,6 @@
     <string name="button_cancel">Cancel</string>
     <string name="marker_dialog_title">Select view marker</string>
     <string name="choose_picture">A picture</string>
+    
+    <string name="gcm_api_key">AIzaSyBnpcp0-fTngYAbuoXbvuM5qmw5gepbmXs</string>
 </resources>
