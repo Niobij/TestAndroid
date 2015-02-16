@@ -8,6 +8,7 @@
     <dimen name="padding_btn">5dp</dimen>
     <dimen name="corner_radius_bnt">30dp</dimen>
     <dimen name="stroke_width">2dp</dimen>
+    <dimen name="l18_zoom_buttons_size">48dp</dimen>
     <integer name="gradient_angle_btn">-90</integer>
     <integer name="gradient_angle_btn_pressed">90</integer>
 

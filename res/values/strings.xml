@@ -4,5 +4,8 @@
     <string name="app_name">TestAndroid</string>
     <string name="hint_name">Enter name</string>
     <string name="hint_pass">Enter pass</string>
+    <string name="location_info">Location info</string>
+    <string name="geo_info_alert_AL18">Geo info:</string>
+    <string name="no_address_found">No adress found</string>
 
 </resources>

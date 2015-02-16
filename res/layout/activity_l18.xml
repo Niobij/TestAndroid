@@ -1,27 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
                 android:layout_height="match_parent">
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/fMap_AL18"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:name="com.google.android.gms.maps.MapFragment"/>
+              android:name="com.google.android.gms.maps.MapFragment" tools:layout="@layout/empty_layout"/>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:orientation="vertical" android:id="@+id/llProgres_AL18" android:visibility="visible"
+                  android:layout_alignParentTop="true" android:layout_alignParentRight="false"
+                  android:layout_centerVertical="true" android:layout_alignParentLeft="true">
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pbProgress_AL18" android:indeterminate="false" android:visibility="invisible"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/llZoomControl_AL18"
+            android:visibility="visible" android:layout_alignParentTop="false" android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+        <ImageView
+                android:layout_width="@dimen/l18_zoom_buttons_size"
+                android:layout_height="@dimen/l18_zoom_buttons_size"
+                android:id="@+id/ivZoomIn_AL18" android:src="@drawable/zoom_in"/>
+        <ImageView
+                android:layout_width="@dimen/l18_zoom_buttons_size"
+                android:layout_height="@dimen/l18_zoom_buttons_size"
+                android:id="@+id/ivZoomOut_AL18" android:src="@drawable/zoom_out"/>
+    </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/llMapControl_AL18"
-            android:layout_above="@+id/llMapType_AL18" android:visibility="invisible">
+            android:layout_above="@+id/llMapType_AL18" android:visibility="visible">
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="My Location"
                 android:id="@+id/btnMyLocation_AL18"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/location_info"
+                android:id="@+id/btnLocationInfo_AL18"/>
     </LinearLayout>
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:orientation="horizontal" android:id="@+id/llMapType_AL18"
-            android:visibility="invisible" android:layout_alignParentBottom="true">
+            android:visibility="visible" android:layout_alignParentBottom="true">
         <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
